@@ -1,0 +1,154 @@
+/* estilos generales */
+body {
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    font-family: arial, sans-serif;
+    color: #222;
+}
+
+/* contenedor principal (el que contiene las 4 tarjetas) */
+.contenedor-cards {
+  display: flex;
+  justify-content: center; 
+  align-items: flex-start;
+  
+  /* Mantienes el GAP DE 150PX para el espacio máximo entre tarjetas */
+  gap: 150px; 
+  
+  /* AJUSTE CLAVE: Aumentar el max-width para que el grupo de tarjetas quepa y se centre correctamente con el gap de 150px */
+  /* Cálculo aproximado requerido: (4 * 280px) + (3 * 150px) = 1120 + 450 = 1570px */
+  max-width: 1600px; 
+  
+  margin: 30px auto; 
+  padding: 0; 
+  flex-wrap: nowrap;
+  box-sizing: border-box;
+}
+
+/* tarjeta individual */
+.card {
+  /* AJUSTE: Aumentamos un poco el ancho base para que todo se vea más grande */
+  width: 280px; 
+  /* min-height CLAVE: asegura que todas las tarjetas tengan una altura base para alinear el boton */
+  min-height: 450px; /* Se aumenta la altura mínima para acomodar el nuevo tamaño */
+  display: flex;
+  flex-direction: column;
+  color: #222;
+  margin-bottom: 20px; 
+}
+
+/* AJUSTE CLAVE: Tarjeta de Podcast (Aumentamos el ancho) */
+.card-podcast {
+    width: 280px; /* Igualamos el ancho al de las tarjetas de imagen */
+}
+
+/* AJUSTE CLAVE: Tarjeta de Opinion (Aumentamos el ancho) */
+.card-opinion {
+    width: 280px; /* Igualamos el ancho al de las tarjetas de imagen */
+}
+
+
+/* imagen principal de tarjeta (eventos y educacion) */
+.card img {
+  /* ancho igual al de la tarjeta (280px) */
+  width: 100%;    
+  /* alto igual al ancho para que sean cuadradas */
+  height: 280px;   
+  object-fit: cover; 
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+/* AJUSTE CLAVE: La imagen de opinion (debe respetar el nuevo ancho) */
+.card-opinion img {
+    width: 100%; 
+    /* Aumentamos la altura de la imagen de opinión proporcionalmente */
+    height: 150px; 
+    object-fit: cover;
+    border-radius: 0; 
+}
+
+
+/* titulo verde con subrayado (pódcast, opinión) */
+.titulo {
+  color: #008d64; 
+  font-size: 1.1em;
+  font-weight: bold;
+  margin-bottom: 12px;
+  border-bottom: 3px solid #008d64;
+  display: inline-block; 
+  padding-bottom: 4px;
+}
+
+/* Spotify Player */
+.podcast-player {
+    width: 100%; 
+}
+
+.podcast-player iframe {
+    /* se asegura el 100% de ancho de su contenedor y se quita el scrolling */
+    width: 100%; 
+    /* AJUSTE CLAVE: Aumentamos la altura del reproductor de spotify para el nuevo ancho de 280px */
+    height: 200px; 
+}
+
+/* texto general */
+.texto {
+  font-size: 0.95em;
+  line-height: 1.5;
+  margin: 0;
+  margin-top: 10px; 
+}
+
+/* fecha */
+.fecha {
+  font-size: 0.8em;
+  color: #666;
+  margin: 8px 0;
+}
+
+/* texto + flecha (eventos y educación) */
+.contenido-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8px;
+  min-height: 50px; 
+}
+
+/* flecha al lado del texto */
+.flecha {
+  font-size: 1.2em;
+  color: #222;
+}
+
+/* boton verde */
+.boton {
+  background-color: #008d64;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 0.9em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* contenedor del boton (centrado para podcast, izquierda para opinion) */
+.boton-contenedor {
+  display: flex;
+  /* CLAVE: margin-top: auto; empuja los botones al final de la tarjeta para la alineacion perfecta */
+  margin-top: auto; 
+  justify-content: flex-start; 
+}
+
+/* centrar el boton de podcast */
+.card-podcast .boton-contenedor {
+    justify-content: center;
+}
+
+/* hover del boton */
+.boton:hover {
+  background-color: #00694d;
+}

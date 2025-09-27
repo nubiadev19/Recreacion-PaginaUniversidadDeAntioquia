@@ -1,23 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Universidad de antioquia</title>
+    <title>replicacion udea</title>
+    <link rel="stylesheet" href="../CSS/style.css"> 
 </head>
-<header>
-    <!-- Primer contenedor (cabecera , inicio de camila) -->
-</header>
 <body>
-    <div><!-- Segundo Contenedor --></div>
-    <div><!-- Tercero Contenedor --></div>
-    <div><!-- Cuarto Contenedor --></div>
-    <div><!-- Quinto Contenedor --></div>
-    <hr><!-- Esto es solo para separar -->
-    <div><!-- Sexto Contenedor ( inicio de nubia )--></div>
-    <div><!-- Septimo Contenedor --></div>
-    <div><!-- Octavo Contenedor --></div>
-    <div><!-- Noveno Contenedor --></div>
-    <div><!-- Decimo Contenedor --></div>
+
+    <section class="contenedor-cards">
+        
+        <div class="card card-evento">
+            <img src="../IMG/eventos-agenda-udea.jpg" alt="eventos">
+            <div class="contenido-card">
+                <p class="texto">Consulta nuestros eventos y agéndate</p>
+                <span class="flecha">→</span>
+            </div>
+        </div>
+
+        <div class="card card-educacion">
+            <img src="../IMG/educacion-udea.jpg" alt="educación">
+            <div class="contenido-card">
+                <p class="texto">Educación a lo largo de la vida</p>
+                <span class="flecha">→</span>
+            </div>
+        </div>
+
+        <div class="card card-podcast">
+            <h3 class="titulo">Pódcast</h3>
+            <div class="podcast-player">
+                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/7x5a7ls1LM952BlzcUbhNz?utm_source=generator" 
+                        frameBorder="0" allowfullscreen="" 
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
+            <p class="texto texto-podcast">Ciencia, arte y comunicación: explorando el 10/12lab innovavoz. temporada 3</p>
+            <p class="fecha">23 sep. 2025</p>
+            <div class="boton-contenedor">
+                <button class="boton">Más pódcast udea</button>
+            </div>
+        </div>
+
+        <div class="card card-opinion">
+            <h3 class="titulo">Opinión</h3>
+            <img src="../IMG/Opinión.png" alt="opinión">
+            <p class="texto">Venezuela y América Latina frente al imperialismo global</p>
+            <p class="fecha">27 sep. 2025</p>
+            <div class="boton-contenedor">
+                <button class="boton">Lee la columna</button>
+            </div>
+        </div>
+
+    </section>
+
 </body>
 </html>
