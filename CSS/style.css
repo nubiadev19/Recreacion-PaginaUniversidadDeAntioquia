@@ -329,7 +329,7 @@ body {
   display: flex;               /* coloca imagen y texto en fila */
   align-items: center;         /* centra verticalmente el texto con la imagen */
   height: 120px;               /* altura de la tarjeta */
-  width: 500px;                /* ancho de la tarjeta */
+  width: 550px;                /* ancho de la tarjeta */
   color: white;                /* texto en blanco */
   font-weight: bold;           /* texto en negrita */
   font-size: 25px;             /* tamaño del texto */
