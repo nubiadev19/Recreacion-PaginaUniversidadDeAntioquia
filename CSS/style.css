@@ -16,10 +16,9 @@ body {
   /* Mantienes el GAP DE 150PX para el espacio máximo entre tarjetas */
   gap: 150px; 
   
-  /* AJUSTE CLAVE: Aumentar el max-width para que el grupo de tarjetas quepa y se centre correctamente con el gap de 150px */
+  /*  Aumentar el max-width para que el grupo de tarjetas quepa y se centre correctamente con el gap de 150px */
   /* Cálculo aproximado requerido: (4 * 280px) + (3 * 150px) = 1120 + 450 = 1570px */
   max-width: 1600px; 
-  
   margin: 30px auto; 
   padding: 0; 
   flex-wrap: nowrap;
@@ -28,7 +27,7 @@ body {
 
 /* tarjeta individual */
 .card {
-  /* AJUSTE: Aumentamos un poco el ancho base para que todo se vea más grande */
+  /*  Aumentamos un poco el ancho base para que todo se vea más grande */
   width: 280px; 
   /* min-height CLAVE: asegura que todas las tarjetas tengan una altura base para alinear el boton */
   min-height: 450px; /* Se aumenta la altura mínima para acomodar el nuevo tamaño */
@@ -38,12 +37,12 @@ body {
   margin-bottom: 20px; 
 }
 
-/* AJUSTE CLAVE: Tarjeta de Podcast (Aumentamos el ancho) */
+/*  Tarjeta de Podcast (Aumentamos el ancho) */
 .card-podcast {
     width: 280px; /* Igualamos el ancho al de las tarjetas de imagen */
 }
 
-/* AJUSTE CLAVE: Tarjeta de Opinion (Aumentamos el ancho) */
+/*  Tarjeta de Opinion (Aumentamos el ancho) */
 .card-opinion {
     width: 280px; /* Igualamos el ancho al de las tarjetas de imagen */
 }
@@ -60,7 +59,7 @@ body {
   margin-bottom: 10px;
 }
 
-/* AJUSTE CLAVE: La imagen de opinion (debe respetar el nuevo ancho) */
+/*  La imagen de opinion () */
 .card-opinion img {
     width: 100%; 
     /* Aumentamos la altura de la imagen de opinión proporcionalmente */
@@ -73,10 +72,11 @@ body {
 /* titulo verde con subrayado (pódcast, opinión) */
 .titulo {
   color: #008d64; 
-  font-size: 1.1em;
+  font-size: 30px;
   font-weight: bold;
   margin-bottom: 12px;
-  border-bottom: 3px solid #008d64;
+   font-family: "Roboto Condensed Bold", sans-serif;
+  border-bottom: 5px solid #008d64;
   display: inline-block; 
   padding-bottom: 4px;
 }
@@ -95,10 +95,12 @@ body {
 
 /* texto general */
 .texto {
-  font-size: 0.95em;
+  font-size: 22px;
   line-height: 1.5;
   margin: 0;
-  margin-top: 10px; 
+  margin-top: 5px; 
+  font-family: "Roboto Condensed Bold", sans-serif;
+  line-height: 24px;
 }
 
 /* fecha */
@@ -125,12 +127,13 @@ body {
 
 /* boton verde */
 .boton {
-  background-color: #008d64;
+  background-color:rgb(64,155,127);
   color: white;
   border: none;
   padding: 8px 16px;
   border-radius: 4px;
-  font-size: 0.9em;
+  font-size: 19px;
+  font-family: Helvetica, sans-serif;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
@@ -157,7 +160,7 @@ body {
 
 /* contenedor principal de la seccion "quiero estudiar en la udea" */
 .estudiar-udea-seccion {
-    background-color: #005a5a; /* color de fondo verde oscuro */
+    background-color: rgb(30,97,100); /* color de fondo verde oscuro */
     color: white; /* color de texto blanco */
     padding-top: 50px; /* espacio superior dentro de la seccion */
     width: 100%; /* ocupa todo el ancho disponible */
@@ -167,8 +170,9 @@ body {
 
 /* titulo principal de la seccion */
 .titulo-principal {
-    font-size: 2.2em; 
+    font-size: 45px; 
     font-weight: bold; 
+   font-family: "Roboto Condensed Bold", sans-serif;
     /* alineacion lateral como en la imagen, usando padding */
     padding-left: 100px; 
     margin-bottom: 60px; /* espacio debajo del título */
@@ -214,18 +218,19 @@ body {
 
 /* titulo de cada opcion (pregrados, posgrados) */
 .opcion-titulo {
-    font-size: 1.1em; 
-    font-weight: bold; 
+    font-size: 20px; 
     margin-bottom: 5px; 
     line-height: 1.3; 
+   font-family: "Roboto Condensed Bold", sans-serif;
     text-transform: uppercase; /* la imagen lo sugiere en mayúsculas */
 }
 
 /* descripcion de cada opcion */
 .opcion-descripcion {
-    font-size: 0.9em; 
+    font-size: 19px; 
     line-height: 1.4; 
     margin-bottom: 0; 
+    font-family: Helvetica, sans-serif;
     /* grow 1 empuja la flecha hacia abajo y asegura la alineacion inferior */
     flex-grow: 1; 
     max-height: 60px; 
@@ -237,7 +242,7 @@ body {
     font-weight: bold;
     color: white; 
     /* la flecha se alinea sola a la izquierda por defecto en flex-direction: column; */
-    align-self: flex-start; 
+    align-self: flex-end; 
     margin-top: 10px; 
     /* la flecha está justo al lado del texto. reducimos el padding. */
     padding-right: 0; 
@@ -254,7 +259,7 @@ body {
 
 /* banner inferior de inscripciones (verde claro) */
 .inscripciones-banner {
-    background-color: #8cc63f; /* color verde claro */
+    background-color: rgb(140,196,62); /* color verde claro */
     color: white; 
     padding: 20px 0; 
     margin-top: 60px; 
@@ -269,6 +274,9 @@ body {
 /* texto dentro del banner de inscripciones */
 .inscripciones-texto {
     margin: 0; 
+    font-family: Helvetica, sans-serif;
+    font-weight: bold;
+    text-shadow: #181717;
 }
 
 /* flecha dentro del banner de inscripciones */
@@ -279,12 +287,144 @@ body {
     margin-left: 10px; 
 }
 
-/* AJUSTE FINAL: el primer item no tiene padding izquierdo visible en la imagen */
+/*el primer item no tiene padding izquierdo visible en la imagen */
 .opciones-estudio .opcion-item:first-child {
     padding-left: 0; 
 }
 
-/* AJUSTE FINAL: el último item no tiene padding derecho visible en la imagen */
+/*  el último item no tiene padding derecho visible en la imagen */
 .opciones-estudio .opcion-item:last-child {
     padding-right: 0; 
+}
+
+
+/** //////////////////////////////////////////**/
+/*octava sección*/
+
+/* contenedor externo para dar espacio alrededor */
+.tarjetas-wrapper {
+  display: flex;               /* usa flexbox para centrar */
+  justify-content: center;     /* centra horizontalmente las tarjetas */
+  padding: 50px 20px;          /* espacio arriba/abajo y a los lados */
+  background-color: #fff;      /* fondo blanco */
+}
+
+/* contenedor interno que agrupa todas las tarjetas */
+.tarjetas {
+  display: flex;               /* organiza en fila */
+  gap: 30px;                   /* espacio entre tarjetas */
+  flex-wrap: wrap;             /* permite que salten de línea si no caben */
+  justify-content: center;     /* centra las filas de tarjetas */
+}
+
+/* estilo general de cada tarjeta */
+.tarjeta {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* sombra ligera */
+  border-radius: 4px;                        /* esquinas suavizadas */
+  overflow: hidden;                          /* evita que la imagen sobresalga */
+}
+
+/* contenedor de imagen + texto */
+.contenido {
+  display: flex;               /* coloca imagen y texto en fila */
+  align-items: center;         /* centra verticalmente el texto con la imagen */
+  height: 120px;               /* altura de la tarjeta */
+  width: 500px;                /* ancho de la tarjeta */
+  color: white;                /* texto en blanco */
+  font-weight: bold;           /* texto en negrita */
+  font-size: 25px;             /* tamaño del texto */
+ font-family: "Roboto Condensed Bold", sans-serif;
+  background-color: #ccc;      /* color por defecto (se sobrescribe abajo) */
+}
+
+/* estilo de la imagen */
+.contenido img {
+  width: 150px;                /* ancho fijo de la imagen */
+  height: 120px;               /* ajustada a la altura de la tarjeta */
+  object-fit: cover;           /* recorta y ajusta la imagen */
+  flex-shrink: 0;              /* evita que se deforme */
+  display: block;              /* elimina espacios de imágenes inline */
+}
+
+/* estilo del texto */
+.contenido span {
+  padding-left: 20px;          /* separación entre la imagen y el texto */
+  white-space: nowrap;         /* evita que el texto se parta en varias líneas */
+}
+
+/* colores personalizados de cada tarjeta */
+.verde .contenido {
+  background-color: rgb(140,196,62);
+}
+
+.azul .contenido {
+  background-color:rgb(23,116,153);
+}
+
+.verde-oscuro .contenido {
+  background-color: rgb(65,154,126);
+}
+
+/***************************/
+/* novena sección "de interés" */
+
+
+/* contenedor general de la sección */
+.interes {
+  background-color: #eeecec62;   /* fondo gris claro */
+  padding: 40px;               /* espacio interno */
+  margin: 40px auto;           /* separación externa */           /* ancho máximo más grande */
+  width: 80%;                /* ocupa el 90% del contenedor padre */
+  border-radius: 6px;          /* esquinas suavizadas */
+}
+
+/* título principal */
+.interes h2 {
+  color: #006d2c;              /* verde institucional */
+  font-size: 50px;             /* tamaño de letra */
+  line-height: 40px;
+  font-family: "Roboto Condensed Bold", sans-serif;
+  margin-bottom: 30px;         /* espacio inferior */
+  border-bottom: 5px solid #006d2c; /* línea inferior */
+  display: inline-block;       /* línea ocupa solo el texto */
+  padding-bottom: 5px;         
+}
+
+/* contenedor en dos columnas */
+.interes-contenido {
+  display: flex;
+  gap: 50px;                   /* espacio pequeño entre columnas */
+  align-items: flex-start;
+}
+
+/* columna izquierda: video */
+.interes-video {
+  flex: 1.3;                   /* video ocupa más espacio */
+  display: flex;
+  justify-content: flex-start;
+}
+
+.interes-video iframe {
+  width: 100%;                 /* ocupa todo el ancho disponible */
+  aspect-ratio: 16/7;          /* mantiene proporción rectangular */
+  border-radius: 6px;
+}
+
+/* columna derecha: texto */
+.interes-texto {
+  flex: 1;                     /* texto también ancho */
+  font-size: 20px;
+  line-height: 1.6;
+  color: #333;
+  font-family: "Roboto Condensed Bold", sans-serif;
+
+}
+
+/* subtítulo dentro del texto */
+.interes-texto h3 {
+  color: #006d2c;              /* verde para subtítulo */
+  font-size: 25px;
+  font-family: "Roboto Condensed Bold", sans-serif;
+  font-weight: bold;
+  margin-bottom: 15px;
 }

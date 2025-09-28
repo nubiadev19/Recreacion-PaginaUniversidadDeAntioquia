@@ -1,151 +1,70 @@
-/* contenedor principal del footer */
-.footer-udea {
-    background-color: #1b7a2d; /* color verde oscuro */
-    color: white; 
-    padding: 40px 0; 
-    position: relative; 
-    font-size: 0.9em; 
-}
+ /* darle color de fondo general al footer */
+    footer {
+      background-color:rgb(50,105,31); /* verde institucional */
+      color: white; /* color de texto blanco */
+      padding: 40px 60px; /* espacio interno */
+      font-family: Arial, sans-serif; /* tipografía */
+    }
 
-/* contenedor del contenido principal del footer (las 4 columnas) */
-.footer-contenido {
-    display: flex; /* CLAVE 1: usa flexbox */
-    justify-content: space-between; /* Distribuye el espacio entre los elementos, mejor que space-around */
-    max-width: 1200px; 
-    margin: 0 auto; 
-    padding: 0 20px; 
-    
-    /* ----------------------------------------------------------------- */
-    /* CLAVE 2: Evita que las columnas se envuelvan a la siguiente fila */
-    flex-wrap: nowrap; 
-    /* ----------------------------------------------------------------- */
-}
+    /* organizar el footer en 4 columnas */
+    .footer-contenedor {
+      display: grid;
+      grid-template-columns: 1.5fr 1.1fr 1.1fr 1.1fr; /* ancho de columnas */
+      gap: 40px; /* espacio entre columnas */
+    }
 
-/* estilos para cada columna del footer */
-.footer-columna {
-    /* CLAVE 3: Distribuye el espacio entre todas las columnas */
-    flex: 1 1 20%; /* flex-grow: 1, flex-shrink: 1, base width: 20% */
-    min-width: 0; /* Permite que se encoja si es necesario sin saltar de línea */
-    margin: 10px 10px; /* Margen horizontal reducido para mantenerlas juntas */
-    box-sizing: border-box; 
-}
+    /* estilos de la primera columna con logo e info */
+    .footer-logo img {
+      width: 300px; /* tamaño del logo */
+      filter: brightness(0) invert(1); /* hacer que el logo se vea blanco */
+      margin-bottom: 20px; /* espacio abajo */
+    }
 
-/* primera columna: logo y contacto */
-.footer-logo-columna {
-    /* Esta columna debe ocupar un poco más de espacio que las otras 3 */
-    flex: 2 1 30%; /* Le damos el doble de crecimiento (2) y más base width (30%) */
-    margin-right: 40px; 
-}
+    /* contenedor de los iconos */
+    .footer-social {
+      display: flex;
+      gap: 15px; /* espacio entre iconos */
+      margin-bottom: 20px; /* separación con los textos */
+      font-size: 22px; /* tamaño de los iconos */
+    }
 
-/* logo de la universidad */
-.footer-logo {
-    max-width: 200px; 
-    height: auto; 
-    margin-bottom: 20px; 
-    
-    /* CLAVE: Transforma un logo oscuro/negro a blanco puro. */
-    filter: brightness(0) invert(1); 
-}
+    .footer-social i {
+      transition: color 0.3s ease; /* animación cambio de color */
+      cursor: pointer; /* se ve como clickeable */
+    }
 
-/* contenedor de los iconos de redes sociales */
-.redes-sociales {
-    display: flex; 
-    gap: 15px; 
-    margin-bottom: 20px; 
-}
+    .footer-social i:hover {
+      color: #cccccc; /* color gris clarito al pasar el mouse */
+    }
 
-/* icono individual de red social (el link <a>) */
-.icono-red {
-    color: white; 
-    font-size: 1.2em; 
-    transition: color 0.3s ease; 
-}
+    /* textos legales debajo del logo */
+    .footer-logo p {
+      font-size: 18px;
+      line-height: 1.2;
+      margin-bottom: 10px;
+      font-family: "Roboto Condensed Bold", sans-serif;
+    }
 
-/* hover de los iconos de red social */
-.icono-red:hover {
-    color: #8cc63f; 
-}
+    /* estilos para los títulos de cada columna */
+    .footer-col h3 {
+      font-size: 19px;
+      margin-bottom: 15px;
+      font-family: "Roboto Condensed Bold", sans-serif;
+      font-weight: bold;
+    }
 
-/* informacion de contacto (nit, direccion, etc.) */
-.info-contacto p {
-    font-size: 0.85em; 
-    line-height: 1.6; 
-    margin-bottom: 15px; 
-}
+    /* estilos para cada texto de las columnas */
+    .footer-col p {
+      font-size: 18px;
+      line-height: 0.5;
+      margin-bottom: 10px;
+      padding: 5px;
+      border-radius: 4px; /* bordes redondeados para hover */
+      transition: background-color 0.3s ease; /* animación suave */
+    }
 
-/* informacion legal (vigilada, copyright) */
-.info-legal p {
-    font-size: 0.75em; 
-    line-height: 1.5;
-    margin-top: 20px; 
-    opacity: 0.8; 
-}
-
-/* titulo de cada columna de enlaces */
-.columna-titulo {
-    font-size: 1em; 
-    font-weight: bold; 
-    margin-bottom: 15px; 
-    text-transform: uppercase; 
-}
-
-/* lista de enlaces */
-.footer-columna ul {
-    list-style: none; 
-    padding: 0; 
-    margin: 0; 
-}
-
-/* cada elemento de la lista */
-.footer-columna li {
-    margin-bottom: 8px; 
-}
-
-/* los enlaces dentro de las columnas */
-.footer-columna a {
-    color: white; 
-    text-decoration: none; 
-    font-size: 0.85em; 
-    transition: color 0.3s ease; 
-}
-
-/* efecto hover para los enlaces */
-.footer-columna a:hover {
-    color: #aaffaa; 
-    text-decoration: underline; 
-}
-
-/* boton para subir al inicio de la pagina */
-.scroll-top-button {
-    position: fixed; 
-    bottom: 30px; 
-    right: 30px; 
-    background-color: #8cc63f; 
-    border-radius: 50%; 
-    width: 50px; 
-    height: 50px; 
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
-    text-decoration: none; 
-    z-index: 1000; 
-    transition: background-color 0.3s ease; 
-}
-
-/* icono de flecha dentro del botón de scroll (font awesome) */
-.scroll-top-button i {
-    color: white; 
-    font-size: 1.2em; 
-}
-
-/* efecto hover para el boton de scroll */
-.scroll-top-button:hover {
-    background-color: #7ab236; 
-}
-
-
-
-
-
-
+    /* efecto al pasar el mouse por cada texto */
+    .footer-col p:hover {
+      background-color: rgba(255, 255, 255, 0.2); /* blanco bajito */
+      cursor: pointer; /*    */
+    }
