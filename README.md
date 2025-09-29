@@ -34,9 +34,3 @@ Este proyecto es el resultado del esfuerzo colaborativo de:
 
 * **NUBIA MARCELA DE LA ROSA OLIVERO** - Desarrollador Frontend
 * **MARIA CAMILA VELEZ BLANCO** - Desarrollador Frontend
-
-
-
----
-
-**¡Esperamos que disfruten explorando nuestra versión de la UdeA!** 🎉
